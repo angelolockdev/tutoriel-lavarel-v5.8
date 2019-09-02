@@ -24,7 +24,7 @@ Route::get('salut', function(){
 });
 
 /*Grouper des routes */
-Route::group(['prefix'=> 'admin', 'middleware'=> 'auth'], function(){
+Route::group(['prefix'=> 'admin', 'middleware'=> 'ip'], function(){
     Route::get('salutation', function(){
         return 'Salut les gens';
     });
