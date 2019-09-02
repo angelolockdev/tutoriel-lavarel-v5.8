@@ -23,6 +23,15 @@ Route::get('salut', function(){
     return "Salut les gens !";
 });
 
+/*Grouper des routes */
+Route::group(['prefix'=> 'admin', 'middleware'=> 'auth'], function(){
+    Route::get('salutation', function(){
+        return 'Salut les gens';
+    });
+});
+
+
+/* Façade + route + parametre :: condition par Regex*/
 Route::get('salut/{slug}-{id}', ['as' => 'salut' , function($slug, $id){
     return "Lien: " . route('salut', ['slug'=>$slug, 'id' => $id]);
 }])->where('slug', '[a-zA-Z0-9\-]+')->where('id', '[0-9]+'); 
