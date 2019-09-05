@@ -12,5 +12,6 @@
 */
 
 Route::get('/salut/{name}', 'WelcomeController@index');  
+Route::get('/', 'HomeController@index'); 
+Route::get('a-propos', ['as'=> 'about', 'uses'=>'PagesController@about']);
  
-//Route::controller('welcome', 'WelcomeController');

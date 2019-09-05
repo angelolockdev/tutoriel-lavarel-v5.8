@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use \Request; 
+use \Response;
 
 class WelcomeController extends Controller
 {
@@ -20,9 +21,8 @@ class WelcomeController extends Controller
     /**
      * @return Response
      */
-    public function index($name){  
-        return "Salut $name";
-        
+    public function index($name){   
         return view('welcome');
     }
+    
 }
