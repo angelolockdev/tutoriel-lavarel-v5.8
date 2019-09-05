@@ -66,7 +66,7 @@
   </div>
 </nav>
 
-<main role="main" class="container">
+<main style="margin-top:100px;" role="main" class="container">
 
     <div class="starter-template">
         <div class="col-sm-8">
