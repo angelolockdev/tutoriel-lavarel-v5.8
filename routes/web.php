@@ -11,6 +11,8 @@
 |
 */
    
+Route::resource('news', 'PostsController');
+
 Route::get('/', 'HomeController@index'); 
 
 Route::resource('link', 'LinksController', ['only'=> ['create', 'store']]);
@@ -22,3 +24,4 @@ Route::get('a-propos', ['as'=> 'about', 'uses'=>'PagesController@about']);
 //Route::get('links/create', 'LinksController@create'); 
 //Route::post('links/create', 'LinksController@store');
 //Route::get('r/{id}', 'LinksController@show')->where('id', '[0-9]+');
+ 
